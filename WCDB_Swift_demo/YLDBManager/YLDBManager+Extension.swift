@@ -28,13 +28,32 @@ extension YLDBManager {
     
     
     func selectUser(_ account:User)->[User]? {
-        debugPrint(User.Properties.name.rawValue);
-        debugPrint(account.name);
-        debugPrint("\(User.Properties.name.rawValue == account.name)");
-        return YLDBManager.select(YLTableName.account, conditioin: nil) { (error) in
+        return YLDBManager.select(YLTableName.account, conditioin: User.Properties.name == account.name) { (error) in
             debugPrint("筛选数据");
         }
         
     }
+    
+    
+
+    func addUserChild(_ child:Children){
+        
+        YLDBManager.insert(YLTableName.children, objects: [child], errorClosure: { (error) in
+            debugPrint("添加孩子失败");
+        }) {
+            debugPrint("添加孩子")
+        }
+    }
+    
+    
+    func checkUserChild(_ account:User) -> [Children]?{
+      return  YLDBManager.select(YLTableName.children, conditioin: Children.Properties.parentId == account.uid) { (error) in
+            debugPrint("查询失败");
+        };
+        
+        
+    }
+    
+    
     
 }

@@ -18,10 +18,11 @@ enum YLDataBase: String, DataBaseProtocol{
     case account = "account.db"
     case city = "city.sqlite"
     case area = "area.sqlite"
+    case children = "children.db"
     /// 数据库文件路径
     var path: String {
         switch self {
-        case .account  :
+        case .account, .children :
             return YLDataBase.documentPath + "/" + self.rawValue
         case .city, .area :
             return Bundle.main.bundlePath + "/" + self.rawValue
@@ -38,6 +39,8 @@ enum YLDataBase: String, DataBaseProtocol{
             return 2
         case .area :
             return 3
+        case .children:
+            return 4;
         }
     }
     
@@ -54,16 +57,19 @@ enum YLDataBase: String, DataBaseProtocol{
 enum YLTableName:String,TableNameProtocol {
     
     case account = "account"
+    case children = "children"
     /// city
     case city = "city"
     case province = "province"
     
     /// area
     case district = "district"
+    
+    
     /// 表对应的数据库
     var database: Database {
         switch self {
-        case .account:
+        case .account,.children:
             return YLDataBase.account.db;
         case .city, .district, .province:
             return YLDataBase.area.db;
@@ -84,6 +90,8 @@ enum YLTableName:String,TableNameProtocol {
             
          case .district:
             pre_select = try? database.prepareSelect(of: District.self, fromTable: tableName, isDistinct: true)
+         case .children:
+            pre_select = try? database.prepareSelect(of: Children.self, fromTable: tableName, isDistinct: true);
             
         }
    
@@ -114,7 +122,16 @@ class YLDBManager: NSObject {
     final func initializa(){
         debugPrint("数据库表的初始化");
         do {
-            try YLDataBase.account.db.create(table: YLTableName.account.tableName, of: User.self);
+            
+            // 库创建表
+         try YLDataBase.account.db.run(transaction: {
+            
+              try YLDataBase.account.db.create(table: YLTableName.account.tableName, of: User.self);
+             try YLDataBase.account.db.create(table: YLTableName.children.tableName, of: Children.self);
+            })
+            
+            
+            
             // 开启事务
             try YLDataBase.area.db.run(transaction: {
                 

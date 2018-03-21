@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		50255CE9EDBF390F41A76C57 /* Pods_WCDB_Swift_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BD9A8EDF2ECF773C7BC246 /* Pods_WCDB_Swift_demo.framework */; };
 		85123EE42060EDC600EE9DF0 /* YLDBManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85123EE32060EDC600EE9DF0 /* YLDBManager+Extension.swift */; };
+		85123EE62061E98F00EE9DF0 /* Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85123EE52061E98F00EE9DF0 /* Children.swift */; };
 		856DC764205F503100DB892B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DC763205F503100DB892B /* AppDelegate.swift */; };
 		856DC766205F503100DB892B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DC765205F503100DB892B /* ViewController.swift */; };
 		856DC769205F503100DB892B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856DC767205F503100DB892B /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		4BBB2E0A3C2AF147D18985CE /* Pods-WCDB_Swift_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCDB_Swift_demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCDB_Swift_demo/Pods-WCDB_Swift_demo.debug.xcconfig"; sourceTree = "<group>"; };
 		55BD9A8EDF2ECF773C7BC246 /* Pods_WCDB_Swift_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCDB_Swift_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85123EE32060EDC600EE9DF0 /* YLDBManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YLDBManager+Extension.swift"; sourceTree = "<group>"; };
+		85123EE52061E98F00EE9DF0 /* Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Children.swift; sourceTree = "<group>"; };
 		856DC760205F503100DB892B /* WCDB_Swift_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCDB_Swift_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		856DC763205F503100DB892B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		856DC765205F503100DB892B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				856DC780205F8AA200DB892B /* City.swift */,
 				856DC782205F8B0B00DB892B /* Province.swift */,
 				856DC784205F8B2B00DB892B /* District.swift */,
+				85123EE52061E98F00EE9DF0 /* Children.swift */,
 			);
 			path = DBModel;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				856DC777205F62D700DB892B /* WCDBManager.swift in Sources */,
 				856DC766205F503100DB892B /* ViewController.swift in Sources */,
+				85123EE62061E98F00EE9DF0 /* Children.swift in Sources */,
 				85123EE42060EDC600EE9DF0 /* YLDBManager+Extension.swift in Sources */,
 				856DC783205F8B0B00DB892B /* Province.swift in Sources */,
 				856DC781205F8AA200DB892B /* City.swift in Sources */,

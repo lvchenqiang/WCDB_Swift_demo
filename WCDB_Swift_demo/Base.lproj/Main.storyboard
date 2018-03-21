@@ -42,6 +42,22 @@
                                     <action selector="checkUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cy0-T7-MGW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOQ-gs-CuD">
+                                <rect key="frame" x="246" y="72" width="102" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="添加孩子"/>
+                                <connections>
+                                    <action selector="addChild:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G6d-Zi-7i7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIe-5s-Ik8">
+                                <rect key="frame" x="253" y="146" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="查询孩子"/>
+                                <connections>
+                                    <action selector="checkChildren:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fYz-M4-UFh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

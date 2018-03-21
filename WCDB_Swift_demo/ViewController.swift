@@ -14,16 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-        //添加数据
-      
+        debugPrint(NSHomeDirectory());
         
-        
-        
-        
-        // 删除数据
-    try? YLDataBase.account.db.delete(fromTable: YLTableName.account.tableName, where: User.Properties.name != "asdasda", orderBy: nil, limit: nil, offset: nil);
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,7 +58,7 @@ class ViewController: UIViewController {
         
         let user = User();
         user.uid = "100";
-        user.name = "qweqwe"
+        user.name = "qweq1adasdwe"
         user.sex = 0;
         user.mobile = "17011962766"
     
@@ -76,6 +68,42 @@ class ViewController: UIViewController {
                 debugPrint("\(u.name)=====\(u.mobile)")
             }
         }
+        
+    }
+    
+    
+    
+    
+    @IBAction func addChild(_ sender: Any) {
+    
+        let child = Children();
+        child.age = 10;
+        child.name = "哈哈😁"
+        child.sex = 1;
+        
+        YLDBManager.default.addUserChild(child);
+        
+    }
+    
+    
+    
+    
+    @IBAction func checkChildren(_ sender: Any) {
+        
+        let user = User();
+        user.uid = "100";
+        user.name = "qweq1adasdwe"
+        user.sex = 0;
+        user.mobile = "17011962766"
+        
+        if let childs = YLDBManager.default.checkUserChild(user){
+            for child in childs{
+                debugPrint("\(child.name) -----\(child.parentId)");
+            }
+        }
+        
+        
+        
         
     }
     
