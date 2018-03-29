@@ -121,6 +121,7 @@ class WCDBManager {
             let errorValue = error as? WCDBSwift.Error
             errorClosure?(errorValue);
         }
+        
     }
     
     
