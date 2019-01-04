@@ -144,7 +144,6 @@
 				856DC75D205F503100DB892B /* Frameworks */,
 				856DC75E205F503100DB892B /* Resources */,
 				946A8176B983044BC2D53A71 /* [CP] Embed Pods Frameworks */,
-				D52479363FA381B560D6F60B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,21 +236,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCDB_Swift_demo/Pods-WCDB_Swift_demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D52479363FA381B560D6F60B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCDB_Swift_demo/Pods-WCDB_Swift_demo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
